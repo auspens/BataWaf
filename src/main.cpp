@@ -4,11 +4,32 @@
 #include <map>
 #include <iomanip>
 #include <fstream>
+#include <string>
 
 int main(){	
-	int number_players{4}, number_games{100000};
+	int number_players, number_games;
+	std::string buf;
+	while (1){
+		std::cout <<"Number of players:"<< std::endl;
+		std::cin>>buf;
+		if (buf.size() == 1 && (buf[0] == '2' || buf[0] == '3' || buf[0] == '4'))
+			break;
+	}
+	number_players = std::stoi(buf, nullptr, 10);
+	while (1){
+		std::cout <<"Number of games:"<< std::endl;
+		std::cin>>buf;
+		try {
+			number_games = std::stoi(buf);
+			if (number_games > 0)
+				break;
+		}
+		catch (std::exception &e){}
+	}
 	std::ofstream file;
-	file.open("statistics.csv");
+	std::string filename = "btw"+std::to_string(number_players)
+							+"p"+std::to_string(number_games)+"g";
+	file.open(filename);
 
 	Game game;
 	std::map <int, int> results;
