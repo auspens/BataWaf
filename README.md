@@ -2,7 +2,7 @@
 A C++ implementation of the children's card game with statistical simulation capabilities.
 
 ## Game Description
-BataWaf is a simple card game for children ages 3+ where players compare dog heights to win cards:
+BataWaf is a nicely illustrated card game for children ages 3+ where players compare dog heights to win cards:
 
 - Deck contains dogs of heights 1 through 6
 - All cards are dealt to players at start
