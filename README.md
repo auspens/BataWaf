@@ -19,7 +19,6 @@ BataWaf is a nicely illustrated card game for children ages 3+ where players com
 - Outputs results to CSV showing:
   - Number of rounds
   - Frequency of each round count
-- Generates filename with parameters (e.g., btw2p1000g for 2 players, 1000 games)
 
 ## How to Use
 1. Compile the program:
@@ -31,7 +30,6 @@ make
 2. Run the simulation:
 
 ```bash
-
 ./exec
 ```
 
